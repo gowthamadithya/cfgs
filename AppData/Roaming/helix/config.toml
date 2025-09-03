@@ -1,0 +1,134 @@
+# ~AppData/Roaming/helix/config.toml
+
+# theme = "base16_transparent"
+theme = "ayu_dark"
+
+[editor]
+true-color = true
+line-number = "relative"
+cursorline = false
+bufferline = "multiple"
+color-modes = true
+scrolloff = 999
+mouse = true
+default-yank-register = "+"
+scroll-lines = 1
+indent-heuristic = "hybrid"
+#rulers = [80]
+# end-of-line-dignostics = "hint"
+
+auto-info = true # disabled when inline diagnostics are set
+auto-format = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.auto-save]
+after-delay.enable = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning" # show warnings and errors on the cursorline inline
+
+[editor.gutters]
+layout = ["diff", "diagnostics", "line-numbers", "spacer"]
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽", "╎"
+skip-levels = 1
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 0
+max-indent-retain = 0
+wrap-indicator = ""
+
+[editor.file-picker]
+hidden = true
+
+[keys.insert]
+#"tab" = "normal_mode"
+
+[keys.normal]
+
+"f" = "move_char_right"
+"e" = "move_visual_line_up"
+"d" = "move_visual_line_down"
+"s" = "move_char_left"
+
+"j" = "goto_word"
+"l" = "move_next_word_end"
+
+"backspace" = ["delete_selection_noyank", "insert_mode"]
+#"backspace" = ["move_char_right", "delete_char_backward", "insert_mode" ]
+#"k" = "delete_char_forward"
+"k" = "delete_selection"
+
+# # neovim settings
+# "F" = "move_next_word_end"
+# "E" = "goto_prev_paragraph"
+# "D" = "goto_next_paragraph"
+# "S" = "move_prev_word_start"
+
+# kakoune settings
+"F" = "extend_char_right"
+"E" = "extend_visual_line_up"
+"D" = "extend_visual_line_down"
+"S" = "extend_char_left"
+"W" = "extend_next_word_end"
+"B" = "extend_prev_word_start"
+"T" = "extend_till_char"
+"X" = "extend_line_above"
+"J" = "extend_to_word"
+"N" = "extend_search_next"
+
+# multi selections
+"h" = "select_regex"
+"H" = "split_selection"
+"K" = "keep_selections"
+"}" = "rotate_selection_contents_forward"
+"{" = "rotate_selection_contents_backward"
+"_" = "trim_selections"
+"^" = "split_selection_on_newline"
+
+
+# G = {"p" = ["select_mode", "goto_next_paragraph", "normal_mode"]} #same as keys.normal.g
+# [keys.normal.g]
+# "p" = "goto_next_paragraph"
+# "P" = ["select_mode", "goto_next_paragraph", "normal_mode"]
+
+# # disable visual mode
+# [keys.normal.v]
+# k = "delete_selection"
+# y = "yank_main_selection_to_clipboard"
+# c = "delete_selection"
+
+
+# pure selection mode entered by pressing v etc
+[keys.select]
+"f" = "extend_char_right"
+"e" = "extend_line_up"
+"d" = "extend_line_down"
+"s" = "extend_char_left"
+
+"h" = "select_regex"
+
+"F" = "extend_next_word_end"
+"E" = "goto_prev_paragraph"
+"D" = "goto_next_paragraph"
+"S" = "extend_prev_word_start"
+
+"j" = "find_next_char"
+"J" = "find_prev_char"
+
+"backspace" = "delete_selection_noyank"
+"k" = "delete_selection"
+
+
+[keys.normal.m]
+"k" = "surround_delete"
+
+
+[keys.normal.space]
+"t" = ":new"
+"q" = ":buffer-close"

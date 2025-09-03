@@ -1,0 +1,174 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": 
+            {
+                "action": "wt",
+                "commandline": "new-tab pwsh.exe ; split-pane -p \"Command Prompt\" -d C:\\ ; split-pane -p \"Ubuntu\" -H"
+            },
+            "id": "User.wt.samplecommand"
+        },
+        {
+            "command": 
+            {
+                "action": "sendInput",
+                "input": "clear\r"
+            },
+            "id": "User.sendInput.7726603B",
+            "name": "clear terminal"
+        }
+    ],
+    "confirmCloseAllTabs": true,
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "initialRows": 30,
+    "keybindings": 
+    [
+        {
+            "id": "User.sendInput.7726603B",
+            "keys": "alt+c"
+        },
+        {
+            "id": "Terminal.ClosePane",
+            "keys": "alt+q"
+        },
+        {
+            "id": "Terminal.MoveFocusNextInOrder",
+            "keys": "alt+n"
+        },
+        {
+            "id": "User.wt.samplecommand",
+            "keys": "ctrl+shift+p"
+        },
+        {
+            "id": "Terminal.DuplicatePaneAuto",
+            "keys": "alt+w"
+        },
+        {
+            "id": "Terminal.CopyToClipboard",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "Terminal.ResizePaneDown",
+            "keys": "alt+d"
+        },
+        {
+            "id": "Terminal.ResizePaneLeft",
+            "keys": "alt+s"
+        },
+        {
+            "id": "Terminal.ResizePaneRight",
+            "keys": "alt+f"
+        },
+        {
+            "id": "Terminal.ResizePaneUp",
+            "keys": "alt+e"
+        },
+        {
+            "id": "Terminal.DuplicatePaneDown",
+            "keys": "alt+shift+minus"
+        },
+        {
+            "id": "Terminal.DuplicatePaneRight",
+            "keys": "alt+shift+plus"
+        },
+        {
+            "id": "Terminal.TogglePaneZoom",
+            "keys": "alt+m"
+        }
+    ],
+    "launchMode": "fullscreen",
+    "minimizeToNotificationArea": false,
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "colorScheme": "One Half Dark",
+            "cursorShape": "filledBox",
+            "font": 
+            {
+                "face": "JetBrainsMono Nerd Font Mono",
+                "size": 11,
+                "weight": "normal"
+            },
+            "opacity": 92,
+            "padding": "0",
+            "scrollbarState": "hidden",
+            "startingDirectory": "%USERPROFILE%",
+            "useAcrylic": false
+        },
+        "list": 
+        [
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell",
+                "source": "Windows.Terminal.Powershell"
+            },
+            {
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt",
+                "source": "Windows.Terminal.CommandPrompt"
+            },
+            {
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{c9faa6b1-7463-53e1-bb0e-21772addaa66}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{a0c68833-c45c-513f-b5b8-b3164484fcdd}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{182274a1-0561-543d-a068-2c48076bbfe3}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Microsoft.WSL"
+            },
+            {
+                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+                "hidden": false,
+                "name": "Git Bash",
+                "source": "Git"
+            },
+            {
+                "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+            }
+        ]
+    },
+    "schemes": [],
+    "tabSwitcherMode": "disabled",
+    "tabWidthMode": "equal",
+    "themes": [],
+    "useAcrylicInTabRow": false,
+    "windowingBehavior": "useNew"
+}

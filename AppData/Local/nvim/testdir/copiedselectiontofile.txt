@@ -1,0 +1,56 @@
+# Lesson 5.2: MORE ON WRITING FILES
+
+** To save the changes made to the text, type `:w`{vim} FILENAME. **
+
+ 1. Type `:!dir`{vim} to get a listing of your directory.
+    You already know you must hit `<Enter>`{normal} after this.
+
+ 2. Choose a filename that does not exist yet, such as TEST.
+
+ 3. Now type:
+~~~ cmd
+        :w TEST
+~~~
+    (where TEST is the filename you chose.)
+
+ 4. This saves the current file under the name TEST.
+    To verify this, type `:!dir`{vim} again to see your directory.
+
+NOTE: If you were to exit Neovim and start it again with `nvim TEST`, the file
+      would be an exact copy of the tutorial when you saved it.
+
+ 5. Now remove the file by typing:
+~~~ cmd
+        :!del TEST
+~~~
+# Lesson 5.3: SELECTING TEXT TO WRITE
+
+** To save part of the file, type `v`{normal} motion `:w FILENAME`{vim}. **
+
+ 1. Move the cursor to this line.
+
+ 2. Press [v](v) and move the cursor to the fifth item below. Notice that the
+    text is highlighted.
+
+ 3. Press the `:`{normal} character. At the bottom of the screen
+
+        `:'<,'>`{vim}
+
+    will appear.
+
+ 4. Type
+
+        `w TEST`{vim}
+
+    where TEST is a filename that does not exist yet. Verify that you see
+
+        `:'<,'>w TEST`{vim}
+
+    before you press `<Enter>`{normal}.
+
+ 5. Neovim will write the selected lines to the file TEST. Use `:!dir`{vim} to see it.
+    Do not remove it yet! We will use it in the next lesson.
+
+NOTE: Pressing [v](v) starts [Visual selection](visual-mode). You can move the cursor around to
+      make the selection bigger or smaller. Then you can use an operator to
+      do something with the text. For example, `d`{normal} deletes the text.
