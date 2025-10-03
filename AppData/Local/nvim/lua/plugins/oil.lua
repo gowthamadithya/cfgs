@@ -1,6 +1,7 @@
 -- oil.nvim as file tree
 return {
   "stevearc/oil.nvim",
+  enabled = false,
   opts = function()
 
     local oil = require("oil")

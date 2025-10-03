@@ -56,13 +56,12 @@ hidden = true
 "d" = "move_visual_line_down"
 "s" = "move_char_left"
 
-"j" = "goto_word"
-"l" = "move_next_word_end"
+"t" = "goto_word"
 
 "backspace" = ["delete_selection_noyank", "insert_mode"]
-#"backspace" = ["move_char_right", "delete_char_backward", "insert_mode" ]
-#"k" = "delete_char_forward"
-"k" = "delete_selection"
+# cut selection
+"c" = "delete_selection"
+# "backspace" = [ "delete_selection", "move_char_left"]
 
 # # neovim settings
 # "F" = "move_next_word_end"
@@ -70,27 +69,44 @@ hidden = true
 # "D" = "goto_next_paragraph"
 # "S" = "move_prev_word_start"
 
-# kakoune settings
+# kakoune style settings
 "F" = "extend_char_right"
 "E" = "extend_visual_line_up"
 "D" = "extend_visual_line_down"
 "S" = "extend_char_left"
 "W" = "extend_next_word_end"
 "B" = "extend_prev_word_start"
-"T" = "extend_till_char"
-"X" = "extend_line_above"
-"J" = "extend_to_word"
+"T" = "extend_to_word"
+# "T" = "extend_till_char"
+# "J" = "extend_to_word"
 "N" = "extend_search_next"
 
 # multi selections
-"h" = "select_regex"
-"H" = "split_selection"
+# "h" = "select_regex"
+# "H" = "split_selection"
+# "V" = "extend_line_below"
+# visual block mode
+"V" = "copy_selection_on_next_line"
+# change selection direction
+"X" = "flip_selections"
+# highligh regex matches
+"H" = "select_regex"
+# chop selections
+"C" = "split_selection"
+# keep selections
 "K" = "keep_selections"
+# leave selections or limit selections to
+"L" = "remove_selections"
+# "J" = "trim_selections"
 "}" = "rotate_selection_contents_forward"
 "{" = "rotate_selection_contents_backward"
-"_" = "trim_selections"
 "^" = "split_selection_on_newline"
 
+# syntax tree navigating
+"k" = "shrink_selection"
+"h" = "expand_selection"
+"l" = "select_next_sibling"
+"j" = "select_prev_sibling"
 
 # G = {"p" = ["select_mode", "goto_next_paragraph", "normal_mode"]} #same as keys.normal.g
 # [keys.normal.g]
@@ -111,6 +127,8 @@ hidden = true
 "d" = "extend_line_down"
 "s" = "extend_char_left"
 
+"T" = "extend_to_word"
+
 "h" = "select_regex"
 
 "F" = "extend_next_word_end"
@@ -122,11 +140,11 @@ hidden = true
 "J" = "find_prev_char"
 
 "backspace" = "delete_selection_noyank"
-"k" = "delete_selection"
+"c" = "delete_selection"
 
 
 [keys.normal.m]
-"k" = "surround_delete"
+"c" = "surround_delete"
 
 
 [keys.normal.space]

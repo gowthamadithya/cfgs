@@ -11,7 +11,7 @@ vim.diagnostic.config({
 
 return {
   "neovim/nvim-lspconfig",
-  -- enabled = false,
+  enabled = false,
   dependencies = {
     'saghen/blink.cmp'
   },

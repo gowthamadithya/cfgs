@@ -1,6 +1,7 @@
 -- Load basic options and keymaps eagerly
-require('config.vanilla')
-
+--require('config.vanilla')
+require('config.helix')
+-- require('config.visual')
 
 
 
@@ -10,14 +11,14 @@ local function load_full_config()
   if vim.g.full_config_loaded then return end
   vim.g.full_config_loaded = true
 
-  require('config.vanillaextras')
-  require('config.commands')
+  -- require('config.vanillaextras')
+  -- require('config.commands')
 
 
   vim.opt.termguicolors = true
-  require('vscodedark').set_highlights()
+  -- require('vscodedark').set_highlights()
   require('config.lazy')
-  vim.cmd("Oil")
+  -- vim.cmd("Oil")
   -- require('config.winbar')
   vim.notify("Full config loaded", vim.log.levels.INFO)
 end
