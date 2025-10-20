@@ -11,7 +11,7 @@ vim.diagnostic.config({
 
 return {
   "neovim/nvim-lspconfig",
-  enabled = false,
+  enabled = true,
   dependencies = {
     'saghen/blink.cmp'
   },
@@ -20,36 +20,36 @@ return {
   -- using `opts` for defining servers
   opts = {
     servers = {
-      -- pylsp = {
-      --   settings = {
-      --     pylsp = {
-      --       -- add or toggle new plugins
-      --       plugins = {
-      --         -- Formatter
-      --         black = { enabled = true }, -- Modern formatter
-      --         autopep8 = { enabled = false },
-      --         yapf = { enabled = false },
-      --
-      --         -- Linting
-      --         pyflakes = { enabled = true }, -- Fast, simple error checker
-      --         pycodestyle = { enabled = true }, -- Enforce PEP8 (configure to match black)
-      --         pylint = { enabled = false }, -- Too heavy, redundant with pyflakes/mypy
-      --         mccabe = { enabled = true }, -- Complexity checker
-      --
-      --         -- Type checker
-      --         pylsp_mypy = { enabled = true }, -- Type-aware error detection
-      --
-      --         -- Code actions
-      --         pylsp_rope = { enabled = true }, -- Rename, extract, etc.
-      --         pyls_isort = { enabled = true }, -- Auto-sort imports
-      --       }
-      --     }
-      --   }
-      -- },
+      pylsp = {
+        settings = {
+          pylsp = {
+            -- add or toggle new plugins
+            plugins = {
+              -- Formatter
+              black = { enabled = true }, -- Modern formatter
+              autopep8 = { enabled = false },
+              yapf = { enabled = false },
 
-      pyright = {
-        root_dir = vim.loop.cwd(),
+              -- Linting
+              pyflakes = { enabled = true }, -- Fast, simple error checker
+              pycodestyle = { enabled = true }, -- Enforce PEP8 (configure to match black)
+              pylint = { enabled = false }, -- Too heavy, redundant with pyflakes/mypy
+              mccabe = { enabled = true }, -- Complexity checker
+
+              -- Type checker
+              pylsp_mypy = { enabled = true }, -- Type-aware error detection
+
+              -- Code actions
+              pylsp_rope = { enabled = true }, -- Rename, extract, etc.
+              pyls_isort = { enabled = true }, -- Auto-sort imports
+            }
+          }
+        }
       },
+
+      -- pyright = {
+      --   root_dir = vim.loop.cwd(),
+      -- },
 
       ts_ls = {
         -- cmd = { "typescript-language-server", "--stdio" },

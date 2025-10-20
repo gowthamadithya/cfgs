@@ -194,23 +194,23 @@ map_sel('E', make_char_extend('k'), '↑ extend char')
 -- word motions
 --------------------------------------------------------------------------------
 map_sel('w', make_nav_select('w', false), '→ word select')
--- map_sel('b', make_nav_select('b', false), '← word select')
+map_sel('b', make_nav_select('b', false), '← word select')
 map_sel('l', make_nav_select('e', false), '→ word-end select')
 vim.keymap.set('o', 'l', 'e', { silent = true, desc = 'move word-end' })
 map_sel('j', make_nav_select('b', false),  '← word select')
 vim.keymap.set('o', 'j', 'b', { silent = true, desc = 'move word-start' })
 
 map_sel('W', make_nav_extend('w', false), '→ word extend')
--- map_sel('B', make_nav_extend('b', false), '← word extend')
+map_sel('B', make_nav_extend('b', false), '← word extend')
 map_sel('L', make_nav_extend('e', false), '→ word-end extend')
 map_sel('J', make_nav_extend('B', false),  '← word extend')
 
 --------------------------------------------------------------------------------
 -- find/till motions
 --------------------------------------------------------------------------------
-map_sel('b', make_nav_select('f', true), 'blip to the matched char select')
-vim.keymap.set('o', 'b', 'f', { silent = true, desc = 'blip to the mathed char' })
-map_sel('B', make_nav_select('F', true), 'blip till char extend')
+-- map_sel('b', make_nav_select('f', true), 'blip to the matched char select')
+-- vim.keymap.set('o', 'b', 'f', { silent = true, desc = 'blip to the mathed char' })
+-- map_sel('B', make_nav_select('F', true), 'blip till char extend')
 -- map_sel('j', make_nav_select('f', true), 'to char select')
 -- map_sel('J', make_nav_extend('f', true), 'to char extend')
 
@@ -223,7 +223,7 @@ map_sel('B', make_nav_select('F', true), 'blip till char extend')
 -- vim.keymap.set({'n', 'v', 'o'}, 'c', 'x', { noremap = true, silent = true, desc = 'c to clear' })
 -- vim.keymap.set({'n', 'v', 'o'}, 'c', 'd', { noremap = true, silent = true, desc = 'c to clear' })
 -- vim.keymap.set({'n', 'v', 'o'}, 'b', 't', { noremap = true, silent = true, desc = 'b to blip to char or word' })
-vim.keymap.set({'n', 'v', 'o'}, 't', 'd', { noremap = true, silent = true, desc = 't to trim' })
+vim.keymap.set({'n', 'v', 'o'}, 'c', 'd', { noremap = true, silent = true, desc = 't to trim' })
 
 -- replace selection with register
 vim.keymap.set('v', 'p', '"_dP', { noremap = true, silent = true, desc = 'Replace selection with register (Kakoune style)' })
